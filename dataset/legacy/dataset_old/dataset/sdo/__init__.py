@@ -1,0 +1,1 @@
+from dataset.sdo.aia_fits import aia_fits_open as open
