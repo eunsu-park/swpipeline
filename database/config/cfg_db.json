@@ -1,0 +1,15 @@
+{
+    "database": {
+        "url": {
+            "drivername": "postgresql+psycopg2",
+            "username": "postgres",
+            "password": "postgres",
+            "host": "localhost",
+            "port": "54325",
+            "database": "swpipeline"
+        },
+        "engine": {
+            "echo": false
+        }
+    }
+}

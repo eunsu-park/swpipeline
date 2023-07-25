@@ -1,0 +1,1198 @@
+{
+    "table_info": {
+        "scan_flag": true,
+        "observer_flag": true,
+        "check_change_flag": true,
+        "table_name": "metadata_nasa_sdo",
+        "data_info": [
+            {
+                "data_path": "/NAS/emc02/sdojp2/nasa/sdo/jp2/aia/94",
+                "data_group": "nasa_sdo_aia_94_jp2",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_94_jp2",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_94.jp2"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "94",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojp2/nasa/sdo/jp2/aia/131",
+                "data_group": "nasa_sdo_aia_131_jp2",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_131_jp2",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_131.jp2"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "131",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojp2/nasa/sdo/jp2/aia/171",
+                "data_group": "nasa_sdo_aia_171_jp2",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_171_jp2",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_171.jp2"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "171",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojp2/nasa/sdo/jp2/aia/193",
+                "data_group": "nasa_sdo_aia_193_jp2",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_193_jp2",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_193.jp2"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "193",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojp2/nasa/sdo/jp2/aia/211",
+                "data_group": "nasa_sdo_aia_211_jp2",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_211_jp2",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_211.jp2"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "211",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojp2/nasa/sdo/jp2/aia/304",
+                "data_group": "nasa_sdo_aia_304_jp2",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_304_jp2",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_304.jp2"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "304",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojp2/nasa/sdo/jp2/aia/335",
+                "data_group": "nasa_sdo_aia_335_jp2",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_335_jp2",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_335.jp2"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "335",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojp2/nasa/sdo/jp2/aia/1600",
+                "data_group": "nasa_sdo_aia_1600_jp2",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_1600_jp2",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_1600.jp2"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "1600",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojp2/nasa/sdo/jp2/aia/1700",
+                "data_group": "nasa_sdo_aia_1700_jp2",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_1700_jp2",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_1700.jp2"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "1700",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojp2/nasa/sdo/jp2/aia/4500",
+                "data_group": "nasa_sdo_aia_4500_jp2",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_4500_jp2",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_4500.jp2"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "4500",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_512/aia/94",
+                "data_group": "nasa_sdo_aia_94_512_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_94_512_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_94_512.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "94",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_512/aia/131",
+                "data_group": "nasa_sdo_aia_131_512_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_131_512_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_131_512.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "131",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_512/aia/171",
+                "data_group": "nasa_sdo_aia_171_512_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_171_512_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_171_512.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "171",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_512/aia/193",
+                "data_group": "nasa_sdo_aia_193_512_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_193_512_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_193_512.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "193",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_512/aia/211",
+                "data_group": "nasa_sdo_aia_211_512_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_211_512_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_211_512.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "211",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_512/aia/304",
+                "data_group": "nasa_sdo_aia_304_512_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_304_512_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_304_512.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "304",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_512/aia/335",
+                "data_group": "nasa_sdo_aia_335_512_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_335_512_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_335_512.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "335",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_512/aia/1600",
+                "data_group": "nasa_sdo_aia_1600_512_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_1600_512_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_1600_512.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "1600",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_512/aia/1700",
+                "data_group": "nasa_sdo_aia_1700_512_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_1700_512_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_1700_512.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "1700",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_512/aia/4500",
+                "data_group": "nasa_sdo_aia_4500_512_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_4500_512_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_4500_512.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "4500",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_1024/aia/94",
+                "data_group": "nasa_sdo_aia_94_1024_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_94_1024_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_94_1024.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "94",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_1024/aia/131",
+                "data_group": "nasa_sdo_aia_131_1024_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_131_1024_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_131_1024.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "131",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_1024/aia/171",
+                "data_group": "nasa_sdo_aia_171_1024_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_171_1024_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_171_1024.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "171",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_1024/aia/193",
+                "data_group": "nasa_sdo_aia_193_1024_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_193_1024_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_193_1024.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "193",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_1024/aia/211",
+                "data_group": "nasa_sdo_aia_211_1024_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_211_1024_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_211_1024.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "211",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_1024/aia/304",
+                "data_group": "nasa_sdo_aia_304_1024_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_304_1024_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_304_1024.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "304",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_1024/aia/335",
+                "data_group": "nasa_sdo_aia_335_1024_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_335_1024_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_335_1024.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "335",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_1024/aia/1600",
+                "data_group": "nasa_sdo_aia_1600_1024_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_1600_1024_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_1600_1024.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "1600",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_1024/aia/1700",
+                "data_group": "nasa_sdo_aia_1700_1024_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_1700_1024_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_1700_1024.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "1700",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_1024/aia/4500",
+                "data_group": "nasa_sdo_aia_4500_1024_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_4500_1024_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_4500_1024.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "4500",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_2048/aia/94",
+                "data_group": "nasa_sdo_aia_94_2048_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_94_2048_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_94_2048.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "94",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_2048/aia/131",
+                "data_group": "nasa_sdo_aia_131_2048_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_131_2048_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_131_2048.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "131",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_2048/aia/171",
+                "data_group": "nasa_sdo_aia_171_2048_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_171_2048_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_171_2048.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "171",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_2048/aia/193",
+                "data_group": "nasa_sdo_aia_193_2048_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_193_2048_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_193_2048.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "193",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_2048/aia/211",
+                "data_group": "nasa_sdo_aia_211_2048_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_211_2048_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_211_2048.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "211",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_2048/aia/304",
+                "data_group": "nasa_sdo_aia_304_2048_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_304_2048_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_304_2048.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "304",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_2048/aia/335",
+                "data_group": "nasa_sdo_aia_335_2048_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_335_2048_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_335_2048.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "335",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_2048/aia/1600",
+                "data_group": "nasa_sdo_aia_1600_2048_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_1600_2048_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_1600_2048.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "1600",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_2048/aia/1700",
+                "data_group": "nasa_sdo_aia_1700_2048_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_1700_2048_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_1700_2048.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "1700",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdojpg/nasa/sdo/jpg_2048/aia/4500",
+                "data_group": "nasa_sdo_aia_4500_2048_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_4500_2048_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_4500_2048.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "AIA",
+                        "wavelength": "4500",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdohmi/nasa/sdo/jp2/hmi/magnetogram",
+                "data_group": "nasa_sdo_hmi_mag_jp2",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_hmi_mag_jp2",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S%f_sdo_hmi_magnetogram.jp2"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "HMI",
+                        "wavelength": "magnetogram",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdohmi/nasa/sdo/jp2/hmi/continuum",
+                "data_group": "nasa_sdo_hmi_continuum_jp2",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_hmi_continuum_jp2",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S%f_sdo_hmi_continuum.jp2"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "HMI",
+                        "wavelength": "continuum",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdohmi/nasa/sdo/jpg_512/hmi/Ic",
+                "data_group": "nasa_sdo_hmi_ic_512_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_hmi_ic_512_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_HMI_IC_512.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "HMI",
+                        "wavelength": "Ic",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdohmi/nasa/sdo/jpg_512/hmi/Ic_flat",
+                "data_group": "nasa_sdo_hmi_ic_flat_512_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_hmi_ic_flat_512_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_HMI_IC_flat_512.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "HMI",
+                        "wavelength": "Ic_flat",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdohmi/nasa/sdo/jpg_512/hmi/M",
+                "data_group": "nasa_sdo_hmi_m_512_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_hmi_m_512_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_HMI_M_512.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "HMI",
+                        "wavelength": "M",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdohmi/nasa/sdo/jpg_512/hmi/M_color",
+                "data_group": "nasa_sdo_hmi_m_color_512_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_hmi_m_color_512_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_HMI_M_color_512.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "HMI",
+                        "wavelength": "M_color",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdohmi/nasa/sdo/jpg_1024/hmi/Ic",
+                "data_group": "nasa_sdo_hmi_ic_1024_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_hmi_ic_1024_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_HMI_IC_1024.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "HMI",
+                        "wavelength": "Ic",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdohmi/nasa/sdo/jpg_1024/hmi/Ic_flat",
+                "data_group": "nasa_sdo_hmi_ic_flat_1024_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_hmi_ic_flat_1024_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_HMI_IC_flat_1024.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "HMI",
+                        "wavelength": "Ic_flat",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdohmi/nasa/sdo/jpg_1024/hmi/M",
+                "data_group": "nasa_sdo_hmi_m_1024_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_hmi_m_1024_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_HMI_M_1024.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "HMI",
+                        "wavelength": "M",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdohmi/nasa/sdo/jpg_1024/hmi/M_color",
+                "data_group": "nasa_sdo_hmi_m_color_1024_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_hmi_m_color_1024_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_HMI_M_color_1024.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "HMI",
+                        "wavelength": "M_color",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdohmi/nasa/sdo/jpg_4096/hmi/Ic",
+                "data_group": "nasa_sdo_hmi_ic_4096_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_hmi_ic_4096_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_HMI_IC_4096.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "HMI",
+                        "wavelength": "Ic",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdohmi/nasa/sdo/jpg_4096/hmi/Ic_flat",
+                "data_group": "nasa_sdo_hmi_ic_flat_4096_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_hmi_ic_flat_4096_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_HMI_IC_flat_4096.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "HMI",
+                        "wavelength": "Ic_flat",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdohmi/nasa/sdo/jpg_4096/hmi/M",
+                "data_group": "nasa_sdo_hmi_m_4096_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_hmi_m_4096_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_HMI_M_4096.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "HMI",
+                        "wavelength": "M",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/emc02/sdohmi/nasa/sdo/jpg_4096/hmi/M_color",
+                "data_group": "nasa_sdo_hmi_m_color_4096_jpg",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_hmi_m_color_4096_jpg",
+                        "storage_id": "emc02",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_HMI_M_color_4096.jpg"
+                        ],
+                        "institute": "NASA",
+                        "observatory": "",
+                        "satellite": "SDO",
+                        "model": "",
+                        "telescope": "HMI",
+                        "wavelength": "M_color",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "table_info": {
+        "scan_flag": false,
+        "observer_flag": false,
+        "check_change_flag": false,
+        "table_name": "metadata_nasa_sdo_aia_131_jp2",
+        "data_info": [
+            {
+                "data_path": "/NAS/emc02/sdojp2/nasa/sdo/jp2/aia/131",
+                "data_group": "nasa_sdo_aia_131",
+                "member_info": [
+                    {
+                        "data_id": "nasa_sdo_aia_131_jp2",
+                        "storage_id": "emc",
+                        "file_format": [
+                            "%Y%m%d_%H%M%S_SDO_AIA_131.jp2"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            }
+        ]
+    }
+}

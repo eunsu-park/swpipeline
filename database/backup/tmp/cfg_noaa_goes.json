@@ -1,0 +1,284 @@
+{
+    "table_info": {
+        "scan_flag": true,
+        "observer_flag": true,
+        "table_name": "metadata_noaa_goes",
+        "data_info": [
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/noaa/swpc/goes/geomag",
+                "data_group": "noaa_goes_geomag",
+                "member_info": [
+                    {
+                        "data_id": "noaa_swpc_g12_geomag_1m",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_G12mag_1m.txt"
+                        ],
+                        "institute": "B",
+                        "observatory": "A",
+                        "satellite": "A",
+                        "model": "A",
+                        "telescope": "A",
+                        "wavelength": "A",
+                        "channel": "A",
+                        "instrument": "A",
+                        "file_server": 999
+                    },
+                    {
+                        "data_id": "noaa_swpc_gp_geomag_1m",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_Gp_mag_1m.txt"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "noaa_swpc_gs_geomag_1m",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_Gs_mag_1m.txt"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/noaa/swpc/goes/particle",
+                "data_group": "noaa_goes_particle",
+                "member_info": [
+                    {
+                        "data_id": "noaa_swpc_g9_particle_5m",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_G9part_5m.txt"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "noaa_swpc_g8_particle_5m",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_G8part_5m.txt"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "noaa_swpc_g10_particle_5m",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_G10part_5m.txt"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "noaa_swpc_g11_particle_5m",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_G11part_5m.txt"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "noaa_swpc_g12_particle_5m",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_G12part_5m.txt"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "noaa_swpc_gp_particle_5m",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_Gp_part_5m.txt"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "noaa_swpc_gs_particle_5m",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_Gs_part_5m.txt"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/noaa/swpc/goes/xray",
+                "data_group": "noaa_goes_xray",
+                "storage_id": "ioGuard",
+                "member_info": [
+                    {
+                        "data_id": "noaa_swpc_g8_xray_1m",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_G8xr_1m.txt"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "noaa_swpc_g10_xray_1m",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_G10xr_1m.txt"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "noaa_swpc_g11_xray_1m",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_G11xr_1m.txt"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "noaa_swpc_g12_xray_1m",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_G12xr_1m.txt"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "noaa_swpc_gp_xray_1m",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_Gp_xr_1m.txt"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "noaa_swpc_gp_xray_5m",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_Gp_xr_5m.txt"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "table_info": {
+        "scan_flag": false,
+        "observer_flag": true,
+        "check_change_flag": true,
+        "table_name": "metadata_ghn",
+        "data_info": [
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/bbso/Global Halpha Network",
+                "data_group": "bbso_ghn",
+                "member_info": [
+                    {
+                        "data_id": "ghn_gong",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "gong_06768_fd_%Y%m%d_%H%M%S.jpg",
+                            "gong_magxx_fd_%Y%m%d_%H%M%S.jpg"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "ghn_kanz",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "kanz_halph_fl_%Y%m%d_%H%M%S.jpg",
+                            "kanz_halph_fr_%Y%m%d_%H%M%S.fts.gz",
+                            "kanz_halph_fr_%Y%m%d_%H%M%S.jpg"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "ghn_bbso",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "bbso_logs_%Y%m%d.txt",
+                            "bbso_logs_%Y%m%d.html",
+                            "bbso_halph_fl_%Y%m%d_%H%M%S.fts",
+                            "bbso_halph_fl_%Y%m%d_%H%M%S.fts.gz",
+                            "bbso_halph_fl_%Y%m%d_%H%M%S.jpg",
+                            "bbso_halph_fr_%Y%m%d_%H%M%S.fts",
+                            "bbso_halph_fr_%Y%m%d_%H%M%S.fts.gz",
+                            "bbso_halph_fr_%Y%m%d_%H%M%S.jpg"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "ghn_oact",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "oact_halph_fl_%Y%m%d_%H%M%S.fts.gz",
+                            "oact_halph_fl_%Y%m%d_%H%M%S.jpg",
+                            "oact_halph_fr_%Y%m%d_%H%M%S.fts.gz",
+                            "oact_halph_fr_%Y%m%d_%H%M%S.jpg"
+                        ],
+                        "institute": "",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            }
+        ]
+    }
+}

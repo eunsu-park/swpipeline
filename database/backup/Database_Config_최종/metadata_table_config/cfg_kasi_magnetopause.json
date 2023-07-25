@@ -1,0 +1,32 @@
+{
+    "table_info": {
+        "scan_flag": true,
+        "observer_flag": true,
+        "check_change_flag": true,
+        "table_name": "metadata_kasi_magnetopause",
+        "data_info": [
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/magnetopause",
+                "data_group": "kasi_magnetopause",
+                "member_info": [
+                    {
+                        "data_id": "kasi_model_magnetopause",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "magnetopause_%Y%m%d_%H%M%S.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            }
+        ]
+    }
+}
