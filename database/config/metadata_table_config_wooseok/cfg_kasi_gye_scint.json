@@ -1,0 +1,339 @@
+{
+    "table_info": {
+        "scan_flag": true,
+        "observer_flag": true,
+        "table_name": "metadata_kasi_gye_scint",
+        "data_info": [
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/gye_scint/data",
+                "data_group": "kasi_gye_scint_data",
+                "member_info": [
+                    {
+                        "data_id": "kasi_gye_scint_channel",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "gye_scint_channel_%Y%m%d.log"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_scint_iono",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "gye_scint_iono_%Y%m%d.log"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_scint_navsol",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "gye_scint_navsol_%Y%m%d.log"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_scint_synoptic",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "gye_scint_synoptic_%Y%m%d.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_scint_txinfo",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "gye_scint_txinfo_%Y%m%d.log"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/gye_scint/png/s4",
+                "data_group": "kasi_gye_scint_png_s4",
+                "member_info": [
+                    {
+                        "data_id": "kasi_gye_scint_s4_png",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "gye_scint_s4_%Y%m%d_%H%M%S.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/gye_scint/png/sigph",
+                "data_group": "kasi_gye_scint_png_sigph",
+                "member_info": [
+                    {
+                        "data_id": "kasi_gye_scint_sigph_png",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "gye_scint_sigph_%Y%m%d_%H%M%S.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/gye_scint/png/tec",
+                "data_group": "kasi_gye_scint_png_tec",
+                "member_info": [
+                    {
+                        "data_id": "kasi_gye_scint_tec_png",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "gye_scint_tec_%Y%m%d_%H%M%S.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol4/data/kasi/scint_KR/raw/bin",
+                "data_group": "kasi_gye_scint_raw_bin",
+                "member_info": [
+                    {
+                        "data_id": "kasi_gye_scint_dataout",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "dataout_%Y_%j_%H%M%S.bin"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_scint_dataoutiq",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "dataoutiq_%Y_%j_%H%M%S.bin"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol4/data/kasi/scint_KR/raw/img",
+                "data_group": "kasi_gye_scint_raw_img",
+                "member_info": [
+                    {
+                        "data_id": "kasi_gye_scint_map",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y-%m-%d_map.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_scint_satpos",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y-%m-%d_satpos.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_scint_serial",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y-%m-%d_serial.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol4/data/kasi/scint_KR/raw/txt",
+                "data_group": "kasi_gye_scint_raw_txt",
+                "member_info": [
+                    {
+                        "data_id": "kasi_gye_scint_iono",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "iono.log"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_scint_navsol",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "navsol.log"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_scint_scint",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "scint.log"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_scint_txinfo",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "txinfo.log"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_scint_channel",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "channel.log"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            }
+        ]
+    }
+}

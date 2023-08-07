@@ -1,0 +1,31 @@
+{
+    "table_info": {
+        "scan_flag": true,
+        "observer_flag": true,
+        "table_name": "metadata_kasi_dst_prediction",
+        "data_info": [
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/dst_prediction",
+                "data_group": "kasi_dst_prediction",
+                "member_info": [
+                    {
+                        "data_id": "kasi_model_dst_prediction",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_dst_prediction.txt"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "",
+                        "satellite": "",
+                        "model": "DST_PREDICTION",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            }
+        ]
+    }
+}

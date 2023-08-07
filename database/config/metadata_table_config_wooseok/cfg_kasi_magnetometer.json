@@ -1,0 +1,287 @@
+{
+    "table_info": {
+        "scan_flag": true,
+        "observer_flag": true,
+        "table_name": "metadata_kasi_magnetometer",
+        "data_info": [
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/magnetometer/boh/graph",
+                "data_group": "kasi_magnetometer_graph",
+                "member_info": [
+                    {
+                        "data_id": "kasi_boh_mag_graph_sec",
+                        "storage_id": "ioGuard",
+                        "file_format": "gm_boh_sec_%Y%m%d.png",
+                        "institute": "KASI",
+                        "observatory": "BOH",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_boh_mag_graph_sp",
+                        "storage_id": "ioGuard",
+                        "file_format": "gm_boh_sp_%Y%m%d.ps",
+                        "institute": "KASI",
+                        "observatory": "BOH",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_boh_mag_graph_latest",
+                        "storage_id": "ioGuard",
+                        "file_format": "gm_boh_latest.png",
+                        "institute": "KASI",
+                        "observatory": "BOH",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_boh_mag_graph_mi",
+                        "storage_id": "ioGuard",
+                        "file_format": "gm_boh_mi_%Y%m%d.png",
+                        "institute": "KASI",
+                        "observatory": "BOH",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/magnetometer/boh/mi_milsec",
+                "data_group": "kasi_magnetometer_mi_ms",
+                "member_info": [
+                    {
+                        "data_id": "kasi_boh_mag_mi_ms_dat",
+                        "storage_id": "ioGuard",
+                        "file_format": "mi_boh_mil_I%Y%m%dL.dat",
+                        "institute": "KASI",
+                        "observatory": "BOH",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_boh_mag_mi_ms_txt",
+                        "storage_id": "ioGuard",
+                        "file_format": "mi_boh_mil_%Y%m%d.txt",
+                        "institute": "KASI",
+                        "observatory": "BOH",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/magnetometer/boh/min",
+                "data_group": "kasi_magnetometer_min",
+                "member_info": [
+                    {
+                        "data_id": "kasi_boh_mag_min",
+                        "storage_id": "ioGuard",
+                        "file_format": "gm_boh_min_%Y%m%d.txt",
+                        "institute": "KASI",
+                        "observatory": "BOH",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/magnetometer/boh/min_average",
+                "data_group": "kasi_magnetometer_min_average",
+                "member_info": [
+                    {
+                        "data_id": "kasi_boh_mag_min_average",
+                        "storage_id": "ioGuard",
+                        "file_format": "min_average_%Y%m.txt",
+                        "institute": "KASI",
+                        "observatory": "BOH",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/magnetometer/boh/pi2",
+                "data_group": "kasi_magnetometer_pi2_list",
+                "member_info": [
+                    {
+                        "data_id": "kasi_boh_mag_pi2_list",
+                        "storage_id": "ioGuard",
+                        "file_format": "pi2_list_%Y%m%d.dat",
+                        "institute": "KASI",
+                        "observatory": "BOH",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/magnetometer/boh/power",
+                "data_group": "kasi_magnetometer_pi2_power",
+                "member_info": [
+                    {
+                        "data_id": "kasi_boh_mag_pi2_power",
+                        "storage_id": "ioGuard",
+                        "file_format": "pi2_power_%Y%m%d.dat",
+                        "institute": "KASI",
+                        "observatory": "BOH",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_boh_mag_mi_spectrum_x",
+                        "storage_id": "ioGuard",
+                        "file_format": "mi_spectrum_%Y%m%d_x.txt",
+                        "institute": "KASI",
+                        "observatory": "BOH",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_boh_mag_mi_spectrum_y",
+                        "storage_id": "ioGuard",
+                        "file_format": "mi_spectrum_%Y%m%d_y.txt",
+                        "institute": "KASI",
+                        "observatory": "BOH",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_boh_mag_mi_spectrum_z",
+                        "storage_id": "ioGuard",
+                        "file_format": "mi_spectrum_%Y%m%d_z.txt",
+                        "institute": "KASI",
+                        "observatory": "BOH",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/magnetometer/boh/sec",
+                "data_group": "kasi_magnetometer_sec",
+                "member_info": [
+                    {
+                        "data_id": "kasi_boh_mag_sec",
+                        "storage_id": "ioGuard",
+                        "file_format": "gm_boh_sec_%Y%m%d.dat",
+                        "institute": "KASI",
+                        "observatory": "BOH",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/magnetometer/boh/sec5",
+                "data_group": "kasi_magnetometer_sec5",
+                "member_info": [
+                    {
+                        "data_id": "kasi_boh_mag_sec5",
+                        "storage_id": "ioGuard",
+                        "file_format": "gm_boh_sec5_%Y%m%d.txt",
+                        "institute": "KASI",
+                        "observatory": "BOH",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/magnetometer/kindex",
+                "data_group": "kasi_magnetometer_kindex",
+                "member_info": [
+                    {
+                        "data_id": "kasi_boh_mag_kindex",
+                        "storage_id": "ioGuard",
+                        "file_format": "kindex_%Y%m.txt",
+                        "institute": "KASI",
+                        "observatory": "BOH",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            }
+        ]
+    }
+}

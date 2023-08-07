@@ -1,0 +1,162 @@
+{
+    "table_info": {
+        "scan_flag": true,
+        "observer_flag": true,
+        "table_name": "metadata_kasi_jbs_scint",
+        "data_info": [
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/jbs_scint/data",
+                "data_group": "kopri_jbs_scint",
+                "member_info": [
+                    {
+                        "data_id": "kopri_jbs_scint_iono",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "jbs_scint_iono_%Y%m%d.log"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "JBS",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kopri_jbs_scint_navsol",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "jbs_scint_navsol_%Y%m%d.log"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "JBS",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kopri_jbs_scint_scint",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "jbs_scint_scint_%Y%m%d.down",
+                            "jbs_scint_scint_%Y%m%d.log"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "JBS",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kopri_jbs_scint_synoptic",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "jbs_scint_synoptic_%Y%m%d.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "JBS",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kopri_jbs_scint_txinfo",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "jbs_scint_txinfo_%Y%m%d.log"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "JBS",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/jbs_scint/png/s4",
+                "data_group": "kasi_jbs_scint_s4",
+                "member_info": [
+                    {
+                        "data_id": "kasi_jbs_scint_s4_png",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "jbs_scint_s4_%Y%m%d_%H%M%S.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "JBS",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/jbs_scint/png/sigph",
+                "data_group": "kasi_jbs_scint_sigph",
+                "member_info": [
+                    {
+                        "data_id": "kasi_jbs_scint_sigph_png",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "jbs_scint_sigph_%Y%m%d_%H%M%S.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "JBS",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol7/swc/data/kasi/jbs_scint/png/tec",
+                "data_group": "kasi_jbs_scint_tec",
+                "member_info": [
+                    {
+                        "data_id": "kasi_jbs_scint_tec_png",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "jbs_scint_tec_%Y%m%d_%H%M%S.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "JBS",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "SCINT",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            }
+        ]
+    }
+}
