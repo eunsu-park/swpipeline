@@ -2,6 +2,7 @@
     "table_info": {
         "scan_flag": true,
         "observer_flag": true,
+        "check_change_flag": true,
         "table_name": "metadata_wdc_dst",
         "data_info": [
             {
@@ -9,7 +10,7 @@
                 "data_group": "wdc_dst",
                 "member_info": [
                     {
-                        "data_id": "wdc_dst_obs",
+                        "data_id": "wdc_dst",
                         "storage_id": "ioGuard",
                         "file_format": [
                             "%Y%m_dst_obs.txt"

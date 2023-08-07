@@ -2,6 +2,7 @@
     "table_info": {
         "scan_flag": true,
         "observer_flag": true,
+        "check_change_flag": true,
         "table_name": "metadata_kopri_jbs_scint",
         "data_info": [
             {
