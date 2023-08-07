@@ -1,0 +1,72 @@
+# hdu[0].header
+SIMPLE  =                    T / file does conform to FITS standard
+BITPIX  =                    8 / number of bits per data pixel
+NAXIS   =                    2 / number of data axes
+NAXIS1  =                 3600 / length of data axis 1
+NAXIS2  =                  200 / length of data axis 2
+EXTEND  =                    T / FITS dataset may contain extensions
+COMMENT   FITS (Flexible Image Transport System) format defined in Astronomy and
+COMMENT   Astrophysics Supplement Series v44/p363, v44/p371, v73/p359, v73/p365.
+COMMENT   Contact the NASA Science Office of Standards and Technology for the
+COMMENT   FITS Definition document #100 and other FITS information.
+DATE    = '2019-04-22'         / Time of observation
+CONTENT = '2019/04/22  Radio flux density, e-CALLISTO (KASI)' / Title of image
+ORIGIN  = 'KASI_Daejeon_Korea' / Organization name
+TELESCOP= 'Radio Spectrometer' / Type of instrument
+INSTRUME= 'KASI    '           / Name of the spectrometer
+OBJECT  = 'Sun     '           / object description
+DATE-OBS= '2019/04/22'         / Date observation starts
+TIME-OBS= '04:00:00.592'       / Time observation starts
+DATE-END= '2019/04/22'         / date observation ends
+TIME-END= '04:15:00'           / time observation ends
+BZERO   =                   0. / scaling offset
+BSCALE  =                   1. / scaling factor
+BUNIT   = 'digits  '           / z-axis title
+DATAMIN =                   82 / minimum element in image
+DATAMAX =                  184 / maximum element in image
+CRVAL1  =               14400. / value on axis 1 at reference pixel [sec of day]
+CRPIX1  =                    0 / reference pixel of axis 1
+CTYPE1  = 'Time [UT]'          / title of axis 1
+CDELT1  =                 0.25 / step between first and second element in x-axis
+CRVAL2  =                 200. / value on axis 2 at the reference pixel
+CRPIX2  =                    0 / reference pixel of axis 2
+CTYPE2  = 'Frequency [MHz]'    / title of axis 2
+CDELT2  =                  -1. / step between first and second element in axis
+OBS_LAT =     36.4000015258789 / observatory latitude in degree
+OBS_LAC = 'N       '           / observatory latitude code {N,S}
+OBS_LON =     127.400001525879 / observatory longitude in degree
+OBS_LOC = 'E       '           / observatory longitude code {E,W}
+OBS_ALT =                 120. / observatory altitude in meter asl
+FRQFILE = 'frq09090.cfg'       / name of frequency file
+PWM_VAL =                  200 / PWM value to control tuner gain
+
+# hdu[0].data
+array([[ 84,  84,  84, ...,  84,  84,  84],
+       [ 84,  83,  83, ...,  84,  84,  84],
+       [ 84,  84,  84, ...,  85,  84,  84],
+       ...,
+       [ 97,  98,  99, ..., 100, 100,  98],
+       [ 92,  93,  92, ...,  95,  96,  92],
+       [ 90,  89,  90, ...,  88,  89,  88]], dtype=uint8)
+
+# hdu[1].header
+XTENSION= 'BINTABLE'           / binary table extension
+BITPIX  =                    8 / 8-bit bytes
+NAXIS   =                    2 / 2-dimensional binary table
+NAXIS1  =                30400 / width of table in bytes
+NAXIS2  =                    1 / number of rows in table
+PCOUNT  =                    0 / size of special data area
+GCOUNT  =                    1 / one data group (required keyword)
+TFIELDS =                    2 / number of fields in each row
+TTYPE1  = 'TIME    '           / label for field   1
+TFORM1  = '3600D8.3'           / data format of field: 8-byte DOUBLE
+TTYPE2  = 'FREQUENCY'          / label for field   2
+TFORM2  = '200D8.3 '           / data format of field: 8-byte DOUBLE
+TSCAL1  =                   1.
+TZERO1  =                   0.
+TSCAL2  =                   1.
+TZERO2  =                   0.
+
+# hdu[1].data
+FITS_rec([([0.0000e+00, 2.5000e-01, 5.0000e-01, ..., 8.9925e+02, 8.9950e+02, 8.9975e+02], [448.31298828, 445.81298828, 445.5       , 442.625     , 441.18798828, 438.25      , 435.625     , 433.43798828, 433.06298828, 429.81298828, 428.125     , 425.75      , 424.56298828, 421.        , 418.5       , 418.        , 415.81298828, 413.5       , 410.18798828, 408.625     , 405.93798828, 403.75      , 403.5       , 401.31298828, 398.625     , 396.18798828, 393.75      , 391.31298828, 389.125     , 388.06298828, 386.375     , 383.31298828, 381.125     , 379.81298828, 377.18798828, 374.75      , 373.43798828, 371.06298828, 368.81298828, 367.56298828, 363.93798828, 361.5       , 359.375     , 357.625     , 356.875     , 353.56298828, 352.93798828, 349.31298828, 348.56298828, 345.56298828, 343.        , 340.31298828, 338.625     , 338.18798828, 335.75      , 333.25      , 330.68798828, 329.        , 325.81298828, 323.56298828, 323.25      , 319.5       , 317.93798828, 316.75      , 313.68798828, 311.375     , 308.75      , 306.56298828, 304.625     , 302.43798828, 300.43798828, 298.125     , 298.        , 295.81298828, 293.625     , 291.43798828, 288.81298828, 286.56298828, 284.125     , 281.81298828, 280.75      , 278.56298828, 276.68798828, 274.25      , 272.25      , 269.31298828, 266.625     , 265.        , 262.81298828, 260.31298828, 259.5       , 256.25      , 254.56300354, 252.81300354, 251.625     , 247.75      , 246.93800354, 243.68800354, 242.25      , 239.5       , 238.75      , 236.68800354, 234.5       , 231.75      , 229.5       , 228.31300354, 224.375     , 224.25      , 221.625     , 219.56300354, 217.31300354, 215.31300354, 212.        , 210.125     , 209.18800354, 206.25      , 204.5       , 202.75      , 200.25      , 196.875     , 195.625     , 193.93800354, 191.125     , 188.43800354, 188.375     , 184.25      , 183.75      , 180.31300354, 179.31300354, 177.43800354, 174.5       , 171.56300354, 171.25      , 167.75      , 166.875     , 163.75      , 161.56300354, 158.93800354, 156.875     , 156.68800354, 153.18800354, 150.5       , 149.625     , 147.31300354, 145.81300354, 143.68800354, 141.625     , 139.81300354, 135.75      , 135.68800354, 132.31300354, 130.81300354, 128.81300354, 126.81300354, 123.375     , 121.5       , 119.625     , 118.81300354, 115.5       , 114.25      , 111.81300354, 109.25      , 107.375     , 105.43800354, 103.56300354, 101.75      ,  99.25      ,  97.31300354,  95.56300354,  93.25      ,  89.625     ,  87.18800354,  85.25      ,  83.875     ,  81.43800354,  80.68800354,  76.81300354,  75.5       ,  72.43800354,  72.375     ,  68.375     ,  67.81300354,  65.375     ,  63.75      ,  59.81299973,  59.75      ,  55.625     ,  54.75      ,  51.68799973,  49.625     ,  47.68799973,  46.75      ,  45.43799973,  45.375     ,  45.31299973,  45.25      ,  45.18799973,  45.125     ,  45.06299973,  45.        ])],
+         dtype=(numpy.record, [('TIME', '>f8', (3600,)), ('FREQUENCY', '>f8', (200,))]))

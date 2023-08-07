@@ -1,0 +1,55 @@
+:Product: 0713RSGA.txt
+:Issued: 2023 Jul 13 2200 UTC
+# Prepared jointly by the U.S. Dept. of Commerce, NOAA,
+# Space Weather Prediction Center and the U.S. Air Force.
+#
+Joint USAF/NOAA Solar Geophysical Activity Report and Forecast
+SDF Number 194 Issued at 2200Z on 13 Jul 2023
+
+IA.  Analysis of Solar Active Regions and Activity from 12/2100Z to
+13/2100Z: Solar activity has been at moderate levels for the past 24
+hours. The largest solar event of the period was a M2 event observed at
+13/1920Z from Region 3372 (N24E53). There are currently 8 numbered
+sunspot regions on the disk.
+IB.  Solar Activity Forecast: Solar activity is likely to be moderate
+with a slight chance for an X-class flare on days one and two (14 Jul,
+15 Jul) and expected to be low with a chance for M-class flares and a
+slight chance for an X-class flare on day three (16 Jul).
+
+IIA.  Geophysical Activity Summary 12/2100Z to 13/2100Z: The geomagnetic
+field has been at quiet to unsettled levels for the past 24 hours. Solar
+wind speed reached a peak of 486 km/s at 12/2124Z. Total IMF reached 14
+nT at 13/1624Z. The maximum southward component of Bz reached -7 nT at
+13/1634Z.  Electrons greater than 2 MeV at geosynchronous orbit reached
+a peak level of 443 pfu.
+IIB.  Geophysical Activity Forecast: The geomagnetic field is expected
+to be at quiet to active levels on day one (14 Jul), quiet to minor
+storm levels on day two (15 Jul) and quiet to unsettled levels on day
+three (16 Jul). Protons greater than 10 Mev have a slight chance of
+crossing threshold on days one and two (14 Jul, 15 Jul).
+
+III.  Event probabilities 14 Jul-16 Jul
+Class M    55/55/50
+Class X    20/15/15
+Proton     10/10/05
+PCAF       green
+
+IV.  Penticton 10.7 cm Flux
+Observed           13 Jul 203
+Predicted   14 Jul-16 Jul 200/202/198
+90 Day Mean        13 Jul 160
+
+V.  Geomagnetic A Indices
+Observed Afr/Ap 12 Jul  006/007
+Estimated Afr/Ap 13 Jul  006/008
+Predicted Afr/Ap 14 Jul-16 Jul  012/014-016/020-010/012
+
+VI.  Geomagnetic Activity Probabilities 14 Jul-16 Jul
+A.  Middle Latitudes
+Active                30/40/35
+Minor Storm           10/25/15
+Major-severe storm    01/05/01
+B.  High Latitudes
+Active                25/15/20
+Minor Storm           25/30/25
+Major-severe storm    20/40/30
