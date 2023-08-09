@@ -61,6 +61,7 @@ def download_file(url, file_path):
     with open(file_path, 'wb') as file:
         file.write(requests.get(url).content)
     print("Download completed from " + url)
+    print("Data ID:", data_stack.stack[1]['data_id'])
     url = url.replace('download', 'search')
     
 def show_table(url):
@@ -194,13 +195,3 @@ def d_search():
                 url = url + '&end_time=' + info_list[3]
             file_path = input("Enter the file path / skip: ")
             download_file(url, file_path)
-
-print("1. Selective Search / 2. Direct Search")
-search_input = input("Enter the number of search method: ")
-
-if search_input == '1':
-    s_search()
-elif search_input == '2':
-    d_search()
-else:
-    exit()
