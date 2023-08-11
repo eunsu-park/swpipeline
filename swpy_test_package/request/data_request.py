@@ -48,7 +48,7 @@ def download_file(url, file_path):
     url = url.replace('search', 'download')
     if len(json_data['data_list']) == 1:
         if file_path == 'skip':
-            file_path = json_data['data_list'][0]['name']
+            file_path = '../dataset/' + json_data['data_list'][0]['name']
     else:
         if file_path == 'skip':
             url_data_line = url.split('?')[-1]
@@ -57,7 +57,7 @@ def download_file(url, file_path):
             for url_data in url_data_list:
                 key, value = url_data.split('=')
                 url_dict[key] = value
-            file_path = url_dict['table'] + '_' + url_dict['data_id'] + '_' + json_data['data_start_time'] + '_' + json_data['data_end_time'] + '.zip'
+            file_path = '../dataset/' + url_dict['table'] + '_' + url_dict['data_id'] + '_' + json_data['data_start_time'] + '_' + json_data['data_end_time'] + '.zip'
     with open(file_path, 'wb') as file:
         file.write(requests.get(url).content)
     print("Download completed from " + url)
