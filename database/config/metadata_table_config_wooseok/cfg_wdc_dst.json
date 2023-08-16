@@ -10,7 +10,7 @@
                 "data_group": "wdc_dst",
                 "member_info": [
                     {
-                        "data_id": "wdc_dst",
+                        "data_id": "wdc_dst_obs",
                         "storage_id": "ioGuard",
                         "file_format": [
                             "%Y%m_dst_obs.txt"

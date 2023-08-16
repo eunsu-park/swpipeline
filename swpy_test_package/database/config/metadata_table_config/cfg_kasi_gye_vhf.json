@@ -1,0 +1,858 @@
+{
+    "table_info": {
+        "scan_flag": true,
+        "observer_flag": true,
+        "check_change_flag": true,
+        "table_name": "metadata_kasi_gye_vhf",
+        "data_info": [
+            {
+                "data_path": "/NAS/ioGuard/vol4/data/kasi/VHF_EMDR/graph",
+                "data_group": "kasi_gye_vhf_graph",
+                "member_info": [
+                    {
+                        "data_id": "kasi_gye_vhf_ef_rv",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_ef_rv.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_ef_snr",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_ef_snr.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_ef_sp",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_ef_sp.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_ef_sw",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_ef_sw.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_e_rv",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_e_rv.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_e_snr",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_e_snr.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_e_sp",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_e_sp.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_e_sw",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_e_sw.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol4/data/kasi/VHF_EMDR/idbs",
+                "data_group": "kasi_gye_vhf_idbs",
+                "member_info": [
+                    {
+                        "data_id": "kasi_gye_vhf_ef_idbs",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_ef.idbs"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_e_idbs",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_e.idbs"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_met",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_met.met"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_met_mpc",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_met.mpc"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_met_vel",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_met.vel"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol4/data/kasi/VHF_EMDR/plotspool",
+                "data_group": "kasi_gye_vhf_plotspool",
+                "member_info": [
+                    {
+                        "data_id": "kasi_gye_vhf_plotspool_e_snr",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "iono_e_snr_%H.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_plotspool_ef_snr",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "iono_ef_snr_%H.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_plotspool_aoa_2d",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "kasi_met_aoa_2d_%H.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_plotspool_aoa",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "kasi_met_aoa_%H.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_plotspool_decay_2d",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "kasi_met_decay_2d_%H.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_plotspool_decay",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "kasi_met_decay_%H.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_plotspool_hist",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "kasi_met_hist_%H.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_plotspool_vel",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "kasi_met_vel_%H.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol4/data/kasi/VHF_EMDR/raw",
+                "data_group": "kasi_gye_vhf_raw",
+                "member_info": [
+                    {
+                        "data_id": "kasi_gye_vhf_ef_raw",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d%H_iono_ef.raw"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_ef_raw_iono_e",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d%H_iono_e.raw"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_ef_raw_met_det",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d%H_met_det.raw"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_met",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d%H_met.raw"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol6/data/kasi/VHF_EMDR/graph",
+                "data_group": "kasi_gye_vhf_graph",
+                "member_info": [
+                    {
+                        "data_id": "kasi_gye_vhf_ef_rv",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_ef_rv.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_ef_snr",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_ef_snr.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_ef_sp",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_ef_sp.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_ef_sw",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_ef_sw.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_e_rv",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_e_rv.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_e_snr",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_e_snr.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_e_sp",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_e_sp.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_e_sw",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_e_sw.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol6/data/kasi/VHF_EMDR/idbs",
+                "data_group": "kasi_gye_vhf_idbs",
+                "member_info": [
+                    {
+                        "data_id": "kasi_gye_vhf_ef_idbs",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_ef.idbs"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_e_idbs",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_iono_e.idbs"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_met",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_met.met"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_met_mpc",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_met.mpc"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_met_vel",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d_met.vel"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol6/data/kasi/VHF_EMDR/plotspool",
+                "data_group": "kasi_gye_vhf_plotspool",
+                "member_info": [
+                    {
+                        "data_id": "kasi_gye_vhf_plotspool_e_snr",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "iono_e_snr_%H.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_plotspool_ef_snr",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "iono_ef_snr_%H.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_plotspool_aoa_2d",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "kasi_met_aoa_2d_%H.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_plotspool_aoa",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "kasi_met_aoa_%H.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_plotspool_decay_2d",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "kasi_met_decay_2d_%H.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_plotspool_decay",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "kasi_met_decay_%H.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_plotspool_hist",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "kasi_met_hist_%H.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_plotspool_vel",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "kasi_met_vel_%H.png"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            },
+            {
+                "data_path": "/NAS/ioGuard/vol6/data/kasi/VHF_EMDR/raw",
+                "data_group": "kasi_gye_vhf_raw",
+                "member_info": [
+                    {
+                        "data_id": "kasi_gye_vhf_ef_raw",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d%H_iono_ef.raw"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_ef_raw_iono_e",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d%H_iono_e.raw"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_ef_raw_met_det",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d%H_met_det.raw"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    },
+                    {
+                        "data_id": "kasi_gye_vhf_met",
+                        "storage_id": "ioGuard",
+                        "file_format": [
+                            "%Y%m%d%H_met.raw"
+                        ],
+                        "institute": "KASI",
+                        "observatory": "GYE",
+                        "satellite": "",
+                        "model": "",
+                        "telescope": "",
+                        "wavelength": "",
+                        "channel": "",
+                        "instrument": "",
+                        "file_server": 0
+                    }
+                ]
+            }
+        ]
+    }
+}

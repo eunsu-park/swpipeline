@@ -28,29 +28,26 @@ class dstDataset(BaseDataset):
                     if s_data:
                         strings.append(s_data)
 
-        DST = np.array(numbers)
-        STR = np.array(strings)
-        STR_ = [''.join(row) for row in STR]
+        DST = np.array(numbers[2:])
+        STR = [''.join(row) for row in strings]
         
-        MONTH = STR[2][0] #변수
-        YEAR = DST[0][0] #변수
-        
-        a = DST[1]
-        HOUR = np.array(a) #변수
+        MONTH = STR[2] #변수
+        YEAR = numbers[0][0] #변수
+        HOUR = np.array(numbers[1]) #변수
         
         h = []
         d = []
-        for lst in DST[2:]:
+        for lst in DST:
             f = lst[0]
             h.append(f)
 
             f_output = lst[1:]
-            d = d + f_output 
+            d.extend(f_output) 
       
         HEADER = np.array(h) #변수
         DATA = np.array(d) #변수
         
-        def m(Month):
+        def m(MONTH):
             if MONTH == 'JANUARY':
                 month = '01'
                 
@@ -103,12 +100,12 @@ class dstDataset(BaseDataset):
         result = [f'{ym}{dh}'.replace("'","") for ym in YearMon for dh in DayHour]
         Date = np.array(result) # 변수
         
-        self.parsing_header(STR_)
+        self.parsing_header(STR)
         self.parsing_data(Date, DATA)
         self.parsing_all(MONTH, YEAR, HOUR, HEADER) 
        
-    def parsing_header(self, STR_):
-        self.header = STR_
+    def parsing_header(self, STR):
+        self.header = STR
         
     def parsing_data(self, Date, DATA):
         data = np.zeros(len(Date), dtype = [('Date', '<U23'), ('Value', int)])
@@ -137,27 +134,25 @@ class DSTDataset(dstDataset):
         super(DSTDataset, self).__init__(file_)
         
     def plot(self):
-        start = input("start (YYYY-MM-DD hh:00:00.000)\n: ") # YYYY-MM-DD hh:00:00.000
-        end = input("end (YYYY-MM-DD hh:00:00.000)\n: ") # YYYY-MM-DD hh:00:00.000
+        start_default = self.data[0][0]
+        end_default = self.data[-1][0]
+        start = input("Enter the start date (YYYY-MM-DD hh:00:00.000 / None): ") # YYYY-MM-DD hh:00:00.000
+        end = input("Enter the end date (YYYY-MM-DD hh:00:00.000 / None): ") # YYYY-MM-DD hh:00:00.000
+        index1 = np.where(self.data['Date'] == start)[0] if start != 'None' else np.where(self.data['Date'] == start_default)[0]
+        index2 = np.where(self.data['Date'] == end)[0] if end != 'None' else np.where(self.data['Date'] == end_default)[0]
 
-        index1 = np.where(self.data['Date'] == start)[0]
-        index2 = np.where(self.data['Date'] == end)[0]
-    
         if len(index1)>0 and len(index2)>0:
-            s_index = index1[0]
-            e_index = index2[0]
+            i = index1[0]
+            j = index2[0] + 1
     
-            interval = self.data['Date'][s_index:e_index+1]
-    
-            i = s_index
-            j = e_index+1
+            interval = self.data['Date'][i : j]
 
             plt.figure(figsize=(10,6))
         
-            plt.plot(interval, self.data['Value'][i:j])
+            plt.plot(interval, self.data['Value'][i : j])
             
             if len(interval)>=6:
-                x_ticks = range(0, len(interval), len(interval)//6)
+                x_ticks = range(0, len(interval), len(interval) // 6)
                 
             else:
                 x_ticks = range(len(interval))
@@ -169,7 +164,10 @@ class DSTDataset(dstDataset):
             comb_title = f"{title1}\n{title2}"
             
             plt.title(f'{comb_title}')
+            plt.ylabel('Dst Value')
             plt.grid()
+            plt.tight_layout()
+            plt.show()
          
         else:
              print("Value not found in Date")
