@@ -1,20 +1,41 @@
+# 필요 라이브러리, 모듈 내용 불러오기
 from .base_dataset import BaseDataset
 from datetime import datetime, timedelta
 import numpy as np
 import matplotlib.pyplot as plt
 
 class JbsDataset(BaseDataset):
+    """
+    JBS 데이터 셋 기본 클래스
+    - 추상 클래스 BaseDataset 내용 구현
+    """
     def __init__(self, file_):
         super(JbsDataset, self).__init__(file_)
 
 class JbsIonoDataset(JbsDataset):
+    """
+    'jbs_scint_iono_YYYYMMDD.log' 파일 데이터 셋 클래스
+    - JbsDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
     
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 헤더 내용이 없어 데이터 부분만 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             lines = file.readlines()
         header = None
@@ -24,9 +45,18 @@ class JbsIonoDataset(JbsDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 정수형, 실수형 데이터로 변환 및 결측치 처리
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         data_line_list = []
         dtype_list = []
         for line in data:
@@ -49,10 +79,21 @@ class JbsIonoDataset(JbsDataset):
         self.data = np.array(list(values), dtype = dtype)
 
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 데이터 종류별 개별 시각화 여부 입력
+        - 개별 시각화의 경우 종류별로 분할
+        - 통합 시각화의 경우 스케일링 후 종류별로 색을 통해 분류
+        """
         names = self.data.dtype.names
         start_default = self.data[names[1]][0]
         end_default = self.data[names[1]][-1]
@@ -99,13 +140,29 @@ class JbsIonoDataset(JbsDataset):
             plt.show()
 
 class JbsNavsolDataset(JbsDataset):
+    """
+    'jbs_scint_navsol_YYYYMMDD.log' 파일 데이터 셋 클래스
+    - JbsDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 헤더 내용이 없어 데이터 부분만 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             lines = file.readlines()
         header = None
@@ -115,9 +172,18 @@ class JbsNavsolDataset(JbsDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 정수형, 실수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         data_line_list = []
         dtype_list = []
         for line in data:
@@ -140,10 +206,21 @@ class JbsNavsolDataset(JbsDataset):
         self.data = np.array(list(values), dtype = dtype)
 
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 데이터 종류별 개별 시각화 여부 입력
+        - 개별 시각화의 경우 종류별로 분할
+        - 통합 시각화의 경우 스케일링 후 종류별로 색을 통해 분류
+        """
         names = self.data.dtype.names
         start_default = self.data[names[1]][0]
         end_default = self.data[names[1]][-1]
@@ -187,13 +264,29 @@ class JbsNavsolDataset(JbsDataset):
             plt.show()
 
 class JbsScintDataset(JbsDataset):
+    """
+    jbs_scint_scint_YYYYMMDD.log' 파일 데이터 셋 클래스
+    - JbsDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 헤더 내용이 없어 데이터 부분만 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             lines = file.readlines()
         header = None
@@ -203,9 +296,18 @@ class JbsScintDataset(JbsDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 정수형, 실수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         data_line_list = []
         dtype_list = []
         int_index = [0, 1, 12, 13, 14]
@@ -229,10 +331,21 @@ class JbsScintDataset(JbsDataset):
         self.data = np.array(list(values), dtype = dtype)
 
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 데이터 종류별 개별 시각화 여부 입력
+        - 개별 시각화의 경우 종류별로 분할
+        - 통합 시각화의 경우 스케일링 후 종류별로 색을 통해 분류
+        """
         names = self.data.dtype.names
         start_default = self.data[names[1]][0]
         end_default = self.data[names[1]][-1]
@@ -277,13 +390,29 @@ class JbsScintDataset(JbsDataset):
             plt.show()
 
 class JbsTxinfoDataset(JbsDataset):
+    """
+    'jbs_scint_txinfo_YYYYMMDD.log' 파일 데이터 셋 클레스
+    - JbsDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 헤더 부분이 없어 데이터 부분만 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             lines = file.readlines()
         header = None
@@ -293,9 +422,18 @@ class JbsTxinfoDataset(JbsDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
     
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 정수형, 실수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         data_line_list = []
         dtype_list = []
         int_index = [0, 1, 5, 6, 7]
@@ -319,10 +457,21 @@ class JbsTxinfoDataset(JbsDataset):
         self.data = np.array(list(values), dtype = dtype)
 
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 데이터 종류별 개별 시각화 여부 입력
+        - 개별 시각화의 경우 종류별로 분할
+        - 통합 시각화의 경우 스케일링 후 종류별로 색을 통해 분류
+        """
         names = self.data.dtype.names
         start_default = self.data[names[1]][0]
         end_default = self.data[names[1]][-1]

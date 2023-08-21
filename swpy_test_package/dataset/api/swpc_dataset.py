@@ -1,21 +1,42 @@
+# 필요 라이브러리, 모듈 내용 불러오기
 from .base_dataset import BaseDataset
 from datetime import datetime, timedelta
 import numpy as np
 import matplotlib.pyplot as plt
 
 class SWPCDataset(BaseDataset):
+    """
+    SWPC 데이터 셋 기본 클래스
+    - 추상 클래스 BaseDataset 내용 구현
+    """
     def __init__(self, file_):
         super(SWPCDataset, self).__init__(file_)
     #     self.parsing()
 
 class SWPCDSDDataset(SWPCDataset):
+    """
+    'YYYY_DSD.txt' 파일 데이터 셋 클래스
+    - SWPCDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 파일 내용을 1줄씩 읽어 헤더와 데이터 부분 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             lines = file.readlines()
         header = ""
@@ -30,9 +51,18 @@ class SWPCDSDDataset(SWPCDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 날짜+시간, 정수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         data_line_list = []
         dtype_list = []
         lines = [line for line in data.strip().split('\n') if line.strip() != '']
@@ -78,10 +108,21 @@ class SWPCDSDDataset(SWPCDataset):
         self.data = np.array(list(zip(dates, *values.T)), dtype = dtype)
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 데이터 종류별 개별 시각화 여부 입력
+        - 개별 시각화의 경우 종류별로 분할
+        - 통합 시각화의 경우 스케일링 후 종류별로 색을 통해 분류
+        """
         names = self.data.dtype.names
         start_default = self.data[names[0]][0]
         end_default = self.data[names[0]][-1]
@@ -127,13 +168,29 @@ class SWPCDSDDataset(SWPCDataset):
             plt.show()
 
 class SWPCDayobsDataset(SWPCDataset):
+    """
+    'YYYYMMDDdayobs.txt' 파일 데이터 셋 클래스
+    - SWPCDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 파일 내용을 1줄씩 읽어 헤더와 데이터 부분 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             lines = file.readlines()
         header = ""
@@ -148,28 +205,60 @@ class SWPCDayobsDataset(SWPCDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 내용을 분리하여 data에 저장
+        """
         lines = [line for line in data.strip().split('\n') if line.strip() != '']
         rows = [line.split() for line in lines]
         self.data = np.array(rows)
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 시각화 가능한 데이터가 아니라고 판단하여 생략
+        """
         pass
 
 class SWPCDaypreDataset(SWPCDataset):
+    """
+    'YYYYMMDDdaypre.txt' 파일 데이터 셋 클래스
+    - SWPCDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 파일 내용을 1줄씩 읽어 헤더와 데이터 부분 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             lines = file.readlines()
         header = ""
@@ -184,26 +273,58 @@ class SWPCDaypreDataset(SWPCDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - data에 내용 저장
+        """
         self.data = data
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 시각화 가능한 데이터가 아니라고 판단하여 생략
+        """
         pass
 
 class SWPCRSGADataset(SWPCDataset):
+    """
+    'YYYYMMDDRSGA.txt' 파일 데이터 셋 클래스
+    - SWPCDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 파일 내용을 1줄씩 읽어 헤더와 데이터 부분 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             lines = file.readlines()
         header = ""
@@ -218,26 +339,58 @@ class SWPCRSGADataset(SWPCDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - data에 내용 저장
+        """
         self.data = data
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 시각화 가능한 데이터가 아니라고 판단하여 생략
+        """
         pass
 
 class SWPCSGASDataset(SWPCDataset):
+    """
+    'YYYYMMDDSGAS.txt' 파일 데이터 셋 클래스
+    - SWPCDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 파일 내용을 1줄씩 읽어 헤더와 데이터 부분 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             lines = file.readlines()
         header = ""
@@ -252,26 +405,58 @@ class SWPCSGASDataset(SWPCDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - data에 내용 저장
+        """
         self.data = data
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 시각화 가능한 데이터가 아니라고 판단하여 생략
+        """
         pass
 
 class SWPCSRSDataset(SWPCDataset):
+    """
+    YYYYMMDDSRS.txt' 파일 데이터 셋 클래스
+    - SWPCDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 파일 내용을 1줄씩 읽어 헤더와 데이터 부분 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             lines = file.readlines()
         header = ""
@@ -286,26 +471,58 @@ class SWPCSRSDataset(SWPCDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - data에 내용 저장
+        """
         self.data = data
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 시각화 가능한 데이터가 아니라고 판단하여 생략
+        """
         pass
 
 class SWPCAuroraPowerDataset(SWPCDataset):
+    """
+    'swpc_aurora_power_YYYYMMDD.txt' 파일 데이터 셋 클래스
+    - SWPCDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 파일 내용을 1줄씩 읽어 헤더와 데이터 부분 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             lines = file.readlines()
         header = ""
@@ -320,9 +537,18 @@ class SWPCAuroraPowerDataset(SWPCDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 날짜+시간, 정수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         dtype_list = []
         dates = []
         values = []
@@ -363,10 +589,21 @@ class SWPCAuroraPowerDataset(SWPCDataset):
         self.data = np.array(list(zip(*dates.T, *values.T)), dtype = dtype)
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 데이터 종류별 개별 시각화 여부 입력
+        - 개별 시각화의 경우 종류별로 분할
+        - 통합 시각화의 경우 스케일링 후 종류별로 색을 통해 분류
+        """
         names = self.data.dtype.names
         start_default = self.data[names[0]][0]
         end_default = self.data[names[0]][-1]

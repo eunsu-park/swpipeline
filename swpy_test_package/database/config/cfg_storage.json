@@ -1,0 +1,70 @@
+{
+    "storage_info": [
+        {
+            "storage_id": "emc",
+            "storage_name": "",
+            "volume_name": "",
+            "ip": "203.253.237.141",
+            "hostname": "",
+            "comment": ""
+        },
+
+        {
+            "storage_id": "emc02",
+            "storage_name": "",
+            "volume_name": "",
+            "ip": "203.253.237.154",
+            "hostname": "",
+            "comment": ""
+        },
+
+        {
+            "storage_id": "3par_gateway",
+            "storage_name": "3par (gateway) | 3PAR GATEWAY",
+            "volume_name": "/hpnas01, /hpnas02, /hpnas03",
+            "ip": "203.253.237.156",
+            "hostname": "3pargateway",
+            "comment": ""
+        },
+
+
+        {
+            "storage_id": "ioGuard2",
+            "storage_name": "",
+            "volume_name": "/fs/vol0, /fs/vol1, /fs/vol2, /fs/vol3, /fs/vol4",
+            "ip": "203.253.237.160",
+            "hostname": "station1",
+            "comment": ""
+        },
+
+        {
+            "storage_id": "ioGuard",
+            "storage_name": "Etrojan (service) (IOGuard1) | Etrojan-NAS",
+            "volume_name": "/fs/vol0, /fs/vol1, /fs/vol2, /fs/vol3, /fs/vol4, /fs/vol5, /fs/vol6, /fs/vol7, /fs/vol8",
+            "ip": "203.253.237.162",
+            "hostname": "deepnas",
+            "comment": ""
+        },
+
+        {
+            "storage_id": "sm01",
+            "storage_name": "Supermicros",
+            "volume_name": "/data1, /data4",
+            "ip": "203.253.237.163",
+            "hostname": "",
+            "comment": ""
+        },
+
+
+        {
+            "storage_id": "sm02",
+            "storage_name": "Supermicro",
+            "volume_name": "/data2",
+            "ip": "203.253.237.164",
+            "hostname": "sdodb_storage2",
+            "comment": ""
+        }
+
+
+    ]
+}

@@ -1,22 +1,42 @@
+# 필요 라이브러리, 모듈 내용 불러오기
 from .base_dataset import BaseDataset
 from datetime import datetime, timedelta
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 class MagnetometerDataset(BaseDataset):
+    """
+    Magnetometer 데이터 셋 기본 클래스
+    - 추상 클래스 BaseDataset 내용 구현
+    """
     def __init__(self, file_):
         super(MagnetometerDataset, self).__init__(file_)
     #     self.parsing()
 
 class MagnetometerBOHminDataset(MagnetometerDataset):
+    """
+    'gm_boh_min_YYYYMMDD.txt' 파일 데이터 셋 클래스
+    - MagnetometerDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 헤더가 존재하지 않아 데이터 부분만 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, "r") as file:
             lines = file.readlines()
         header = None
@@ -26,9 +46,18 @@ class MagnetometerBOHminDataset(MagnetometerDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 날짜+시간, 정수형, 실수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         data_line_list = []
         dtype_list = []
         for line in data:
@@ -62,10 +91,21 @@ class MagnetometerBOHminDataset(MagnetometerDataset):
         self.data = np.array(list(zip(dates, *values.T)), dtype = dtype)
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 데이터 종류별 개별 시각화 여부 입력
+        - 개별 시각화의 경우 종류별로 분할
+        - 통합 시각화의 경우 스케일링 후 종류별로 색을 통해 분류
+        """
         names = self.data.dtype.names
         start_default = self.data[names[0]][0]
         end_default = self.data[names[0]][-1]
@@ -110,13 +150,29 @@ class MagnetometerBOHminDataset(MagnetometerDataset):
             plt.show()
 
 class MagnetometerBOHsec5Dataset(MagnetometerDataset):
+    """
+    'gm_boh_sec5_YYYYMMDD.txt' 파일 데이터 셋 클래스
+    - MagnetometerDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 파일 내용을 1줄씩 읽어 헤더와 데이터 부분 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, "r") as file:
             lines = file.readlines()
         header = lines[0]
@@ -126,9 +182,19 @@ class MagnetometerBOHsec5Dataset(MagnetometerDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 'doy'는 불필요하다 판단해 데이터에서 제외 -> 헤더 뒤에 추가
+        - 각 줄의 위치별로 날짜+시간, 실수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         dtype_list = []
         dates = []
         values = []
@@ -150,37 +216,23 @@ class MagnetometerBOHsec5Dataset(MagnetometerDataset):
         values = np.array(values)
         dtype = np.dtype(dtype_list)
         self.data = np.array(list(zip(dates, *values.T)), dtype = dtype)
-
-        # dtype_list = []
-        # dates = []
-        # values = []
-        # for line in data:
-        #     date_str = ' '.join(line[0:3]) + ' ' + ' '.join(line[4:7])
-        #     data_num = line[3] + ' ' + ' '.join(line[7:])
-        #     data_num_list = []
-        #     for i, value in enumerate(data_num.split()):
-        #         if i == 0:
-        #             data_num_list.append(int(value))
-        #         else:
-        #             data_num_list.append(float(value))
-        #     date = datetime.strptime(date_str, "%Y %m %d %H %M %S")
-        #     dates.append(date)
-        #     values.append(data_num_list)
-
-        # names = ['Date', 'Doy', 'H [nT]', 'D [nT]', 'Z [nT]', 'Proton [nT]']
-        # types = ['datetime64[us]', np.int64, np.float64, np.float64, np.float64, np.float64]
-        # dtype_list = list(zip(names, types))
-
-        # dates = np.array(dates, dtype='datetime64[us]')
-        # values = np.array(values)
-        # dtype = np.dtype(dtype_list)
-        # self.data = np.array(list(zip(dates, *values.T)), dtype = dtype)
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 데이터 종류별 개별 시각화 여부 입력
+        - 개별 시각화의 경우, 종류별로 분할
+        - 통합 시각화의 경우 스케일링 후 종류별로 색을 통해 분류
+        """
         names = self.data.dtype.names
         start_default = self.data[names[0]][0]
         end_default = self.data[names[0]][-1]
@@ -225,13 +277,29 @@ class MagnetometerBOHsec5Dataset(MagnetometerDataset):
             plt.show()
 
 class MagnetometerKindexDataset(MagnetometerDataset):
+    """
+    'kindex_YYYYMM.txt' 파일 데이터 셋 클래스
+    - MagnetometerDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 파일 내용을 1줄씩 읽어 헤더와 데이터 부분 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             header = ""
             data = ""
@@ -246,9 +314,19 @@ class MagnetometerKindexDataset(MagnetometerDataset):
             self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 내용이 날짜별로 8개의 시간대로 기록되어 통합되게 변환
+        - 각 줄의 위치별로 날짜+시간, 정수형 데이터로 변환
+        - 변환 후 data에 저장
+        """
         hours = ['00', '03', '06', '09', '12', '15', '18', '21']
         values = []
         lines = data.strip().split("\n")
@@ -269,10 +347,19 @@ class MagnetometerKindexDataset(MagnetometerDataset):
         self.data = values
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 조회 데이터 구간 내의 측정값 그래프로 표시
+        """
         names = self.data.dtype.names
         start_default = self.data[0, 0]
         end_default = self.data[-1, 0]
@@ -299,13 +386,29 @@ class MagnetometerKindexDataset(MagnetometerDataset):
         plt.show()
 
 class MagnetometerBOHmilDataset(MagnetometerDataset):
+    """
+    'mi_boh_mil_YYYYMMDD.txt' 파일 데이터 셋 클래스
+    - MagnetometerDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 파일 내용을 1줄씩 읽어 헤더와 데이터 부분 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, "r") as file:
             lines = file.readlines()
         header = lines[0]
@@ -315,9 +418,18 @@ class MagnetometerBOHmilDataset(MagnetometerDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 날짜+시간, 실수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         dtype_list = []
         dates = []
         values = []
@@ -341,10 +453,21 @@ class MagnetometerBOHmilDataset(MagnetometerDataset):
         self.data = np.array(list(zip(dates, *values.T)), dtype = dtype)
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 데이터 종류별 개별 시각화 여부 입력
+        - 개별 시각화의 경우 종류별로 분할
+        - 통합 시각화의 경우 스케일링 후 종류별로 색을 통해 분류
+        """
         names = self.data.dtype.names
         start_default = self.data[names[0]][0]
         end_default = self.data[names[0]][-1]
@@ -385,13 +508,29 @@ class MagnetometerBOHmilDataset(MagnetometerDataset):
             plt.show()
 
 class MagnetometerMISpectrumXDataset(MagnetometerDataset):
+    """
+    'mi_spectrum_YYYYMMDD_x.txt' 파일 데이터 셋 클래스
+    - MagnetometerDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 파일 내용을 1줄씩 읽어 헤더와 데이터 부분 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, "r") as file:
             lines = file.readlines()
         header = lines[0]
@@ -401,9 +540,18 @@ class MagnetometerMISpectrumXDataset(MagnetometerDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 날짜+시간, 실수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         dtype_list = []
         dates = []
         values = []
@@ -437,10 +585,20 @@ class MagnetometerMISpectrumXDataset(MagnetometerDataset):
         self.data = np.array(list(zip(dates, *values.T)), dtype = dtype)
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - x축을 측정 날짜, y축을 측정값 종류로 하여 이미지 생성
+        - 각 측정값에 따라 색을 통해 분류하여 표시
+        """
         names = self.data.dtype.names
         start_default = self.data[names[0]][0]
         end_default = self.data[names[0]][-1]
@@ -470,13 +628,29 @@ class MagnetometerMISpectrumXDataset(MagnetometerDataset):
         plt.show()
 
 class MagnetometerMISpectrumYDataset(MagnetometerDataset):
+    """
+    'mi_spectrum_YYYYMMDD_y.txt' 파일 데이터 셋 클래스
+    - MagnetometerDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 파일 내용을 1줄씩 읽어 헤더와 데이터 부분 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, "r") as file:
             lines = file.readlines()
         header = lines[0]
@@ -486,9 +660,18 @@ class MagnetometerMISpectrumYDataset(MagnetometerDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 날짜+시간, 실수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         data_list = []
         year = data[0]
         for i in range(719):
@@ -533,10 +716,20 @@ class MagnetometerMISpectrumYDataset(MagnetometerDataset):
         self.data = np.array(list(zip(dates, *values.T)), dtype = dtype)
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - x축을 측정 날짜, y축을 측정값 종류로 하여 이미지 생성
+        - 각 측정값에 따라 색을 통해 분류하여 표시
+        """
         names = self.data.dtype.names
         start_default = self.data[names[0]][0]
         end_default = self.data[names[0]][-1]
@@ -566,13 +759,29 @@ class MagnetometerMISpectrumYDataset(MagnetometerDataset):
         plt.show()
 
 class MagnetometerMISpectrumZDataset(MagnetometerDataset):
+    """
+    'mi_spectrum_YYYYMMDD_z.txt' 파일 데이터 셋 클래스
+    - Magnetometer 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 파일 내용을 1줄씩 읽어 헤더와 데이터 부분 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, "r") as file:
             lines = file.readlines()
         header = lines[0]
@@ -582,9 +791,18 @@ class MagnetometerMISpectrumZDataset(MagnetometerDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 날짜+시간, 실수형 데이터로 변환 및 결측치 처리
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         data_list = []
         year = data[0]
         for i in range(719):
@@ -629,10 +847,20 @@ class MagnetometerMISpectrumZDataset(MagnetometerDataset):
         self.data = np.array(list(zip(dates, *values.T)), dtype = dtype)
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - x축을 측정 날짜, y축을 측정값 종류로 하여 이미지 생성
+        - 각 측정값에 따라 색을 통해 분류하여 표시
+        """
         names = self.data.dtype.names
         start_default = self.data[names[0]][0]
         end_default = self.data[names[0]][-1]
@@ -662,13 +890,29 @@ class MagnetometerMISpectrumZDataset(MagnetometerDataset):
         plt.show()
 
 class MagnetometerMinAverageDataset(MagnetometerDataset):
+    """
+    'min_average_YYYYMM.txt' 파일 데이터 셋 클래스
+    - MagnetometerDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 헤더 내용이 없어 데이터 부분만 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, "r") as file:
             lines = file.readlines()
         header = None
@@ -678,9 +922,18 @@ class MagnetometerMinAverageDataset(MagnetometerDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 날짜+시간, 실수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         data_line_list = []
         dtype_list = []
         for line in data:
@@ -707,10 +960,21 @@ class MagnetometerMinAverageDataset(MagnetometerDataset):
         self.data = np.array(list(zip(dates, *values.T)), dtype = dtype)
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 데이터 종류별 개별 시각화 여부 입력
+        - 개별 시각화의 경우 종류별로 분할
+        - 통합 시각화의 경우 스케일링 후 종류별로 색을 통해 분류
+        """
         names = self.data.dtype.names
         start_default = self.data[names[0]][0]
         end_default = self.data[names[0]][-1]
@@ -751,13 +1015,29 @@ class MagnetometerMinAverageDataset(MagnetometerDataset):
             plt.show()
 
 class MagnetometerPi2listDataset(MagnetometerDataset):
+    """
+    'pi2_list_YYYYMMDD.dat' 파일 데이터 셋 클래스
+    - MagnetometerDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 파일 내용을 1줄씩 읽어 헤더와 데이터 부분 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, "r") as file:
             lines = file.readlines()
         header = lines[0]
@@ -767,9 +1047,18 @@ class MagnetometerPi2listDataset(MagnetometerDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 날짜+시간, 정수형, 실수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         dtype_list = []
         dates = []
         values = []
@@ -796,10 +1085,19 @@ class MagnetometerPi2listDataset(MagnetometerDataset):
         self.data = np.array(list(zip(dates, values[:, -1])))
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 조회 데이터 구간 내 측정값 그래프로 표시
+        """
         start_default = self.data[:, 0][0]
         end_default = self.data[:, 0][-1]
         start_input = input("Enter the start date (YYYY-MM-DD HH:MM:SS.ffffff / None): ")
@@ -816,13 +1114,29 @@ class MagnetometerPi2listDataset(MagnetometerDataset):
         plt.show()
 
 class MagnetometerPi2powerDataset(MagnetometerDataset):
+    """
+    'pi2_power_YYYYMMDD.dat' 파일 데이터 셋 클래스
+    - MagnetometerDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 파일 내용을 1줄씩 읽어 헤더와 데이터 부분 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, "r") as file:
             lines = file.readlines()
         header = lines[0]
@@ -832,9 +1146,18 @@ class MagnetometerPi2powerDataset(MagnetometerDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 날짜+시간, 정수형, 실수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         dtype_list = []
         dates = []
         values = []
@@ -861,10 +1184,19 @@ class MagnetometerPi2powerDataset(MagnetometerDataset):
         self.data = np.array(list(zip(dates, values[:, -1])))
             
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 조회 데이터 구간 내 측정값 그래프로 표시
+        """
         start_default = self.data[:, 0][0]
         end_default = self.data[:, 0][-1]
         start_input = input("Enter the start date (YYYY-MM-DD HH:MM:SS.ffffff / None): ")

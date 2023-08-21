@@ -2,91 +2,44 @@
 """
 gye_dataset_log.py
 """
+
+# 필요 라이브러리, 모듈 내용 불러오기
 from .base_dataset import BaseDataset
 import numpy as np
 import matplotlib.pyplot as plt
 
-# 파일 이름 선언해주기 / 파일이 너무 많을 때 메모리에서 지우는게 필요할까?
-# class gyeDataset(BaseDataset):
-#     def __init__(self, file_):
-#         super(gyeDataset, self).__init__(file_)
-#         self.file_name = file_
-        
-#     def parsing(self):
-#         with open(self.file_, 'r') as file:
-#             d = []
-#             count = 0
-#             for line in file:
-#                 data = line.strip().split('\t')
-#                 d = d+data
-                
-#                 count += 1
-#                 if count == 100000:
-#                     break
-                
-#             columns = list(zip(*[line.split() for line in d]))
-#             column = np.array(columns)
-            
-#             dic = {f'column{i+1}': column for i,column in enumerate(column)}
-                            
-#             HEADER = list(dic.keys())
-#             DATA = list(dic.values())
-#             ITEM = list(dic.items())
-            
-#         self.parsing_header(HEADER)
-#         self.parsing_data(DATA)
-#         self.parsing_all(ITEM)
-        
-#     def parsing_header(self, HEADER):
-#         header = np.array(HEADER)
-#         self.header = header
-         
-#     def parsing_data(self, DATA):
-#         data = np.array(DATA)
-#         self.data = data
-        
-#     def parsing_all(self, ITEM):
-#         self.item = ITEM
-        
-#         all = {'HEADER' : self.header,
-#                'DATA' : self.data }
-        
-#         self.all = all
-
-# class GYEDataset(gyeDataset):
-#     def __init__(self, file_):
-#         super(GYEDataset, self).__init__(file_)
-        
-#     def plot(self):
-#         for i in range(len(self.item)):
-#             plt.figure(figsize=(9,6))
-#             c_lst = ['b','c','g','r']
-#             color_lst = c_lst*4
-#             plt.plot(self.item[i][1], label = self.header[i], color = color_lst[i])
-            
-#             desired_y_ticks = 6
-
-#             y_min, y_max = plt.ylim()
-#             num_y_ticks = min(desired_y_ticks, int(y_max - y_min) + 1)
-            
-#             y_ticks = np.linspace(y_min, y_max, num_y_ticks)
-#             plt.yticks(y_ticks,['%.2f' % tick for tick in y_ticks])
-            
-#             plt.title(f'{self.file_name}')
-#             plt.legend(loc = 'upper left', fontsize = 12)
-
 class GyeDataset(BaseDataset):
+    """
+    GYE 데이터 셋 기본 클래스
+    - 추상 클래스 BaseDataset 내용 구현
+    """
     def __init__(self, file_):
         super(GyeDataset, self).__init__(file_)
 
 class GyeChannelDataset(GyeDataset):
+    """
+    'channel.log' 파일 데이터 셋 클래스
+    - GyeDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 헤더 내용이 없어 데이터 부분만 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             lines = file.readlines()
         header = None
@@ -96,9 +49,18 @@ class GyeChannelDataset(GyeDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 정수형, 실수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         float_index = [0, 3, 4, 5, 6, 7]
         data_line_list = []
         dtype_list = []
@@ -122,10 +84,21 @@ class GyeChannelDataset(GyeDataset):
         self.data = np.array(list(values), dtype = dtype)
 
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 데이터 종류별 개별 시각화 여부 입력
+        - 개별 시각화의 경우 종류별로 분할
+        - 통합 시각화의 경우 스케일링 후 종류별로 색을 통해 분류
+        """
         names = self.data.dtype.names
         start_default = self.data[names[2]][0]
         end_default = self.data[names[2]][-1]
@@ -169,13 +142,29 @@ class GyeChannelDataset(GyeDataset):
             plt.show()
 
 class GyeIonoDataset(GyeDataset):
+    """
+    'iono.log' 파일 데이터 셋 클래스
+    - GyeDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 헤더 내용이 없어 데이터 부분만 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             lines = file.readlines()
         header = None
@@ -185,9 +174,18 @@ class GyeIonoDataset(GyeDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 정수형, 실수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         data_line_list = []
         dtype_list = []
         for line in data:
@@ -210,10 +208,21 @@ class GyeIonoDataset(GyeDataset):
         self.data = np.array(list(values), dtype = dtype)
 
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 데이터 종류별 개별 시각화 여부 입력
+        - 개별 시각화의 경우 종류별로 분할
+        - 통합 시각화의 경우 스케일링 후 종류별로 색을 통해 분류
+        """
         names = self.data.dtype.names
         start_default = self.data[names[0]][0]
         end_default = self.data[names[0]][-1]
@@ -255,13 +264,29 @@ class GyeIonoDataset(GyeDataset):
             plt.show()
 
 class GyeNavsolDataset(GyeDataset):
+    """
+    'navsol.log' 파일 데이터 셋 클래스
+    - GyeDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 헤더 내용이 없어 데이터 부분만 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             lines = file.readlines()
         header = None
@@ -271,9 +296,18 @@ class GyeNavsolDataset(GyeDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
     
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 정수형, 실수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         data_line_list = []
         dtype_list = []
         for line in data:
@@ -296,10 +330,21 @@ class GyeNavsolDataset(GyeDataset):
         self.data = np.array(list(values), dtype = dtype)
 
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
     
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 데이터 종류별 개별 시각화 여부 입력
+        - 개별 시각화의 경우 종류별로 분할
+        - 통합 시각화의 경우 스케일링 후 종류별로 색을 통해 분류
+        """
         names = self.data.dtype.names
         start_default = self.data[names[0]][0]
         end_default = self.data[names[0]][-1]
@@ -342,13 +387,29 @@ class GyeNavsolDataset(GyeDataset):
             plt.show()
 
 class GyeScintDataset(GyeDataset):
+    """
+    'scint.log' 파일 데이터 셋 클래스
+    - GyeDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 헤더 내용이 없어 데이터 부분만 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             lines = file.readlines()
         header = None
@@ -358,9 +419,18 @@ class GyeScintDataset(GyeDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 정수형, 실수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         data_line_list = []
         dtype_list = []
         for line in data:
@@ -383,10 +453,21 @@ class GyeScintDataset(GyeDataset):
         self.data = np.array(list(values), dtype = dtype)
 
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 데이터 종류별 개별 시각화 여부 입력
+        - 개별 시각화의 경우 종류별로 분할
+        - 통합 시각화의 경우 스케일링 후 종류별로 색을 통해 분류
+        """
         names = self.data.dtype.names
         start_default = self.data[names[0]][0]
         end_default = self.data[names[0]][-1]
@@ -431,13 +512,29 @@ class GyeScintDataset(GyeDataset):
             plt.show()
 
 class GyeTxinfoDataset(GyeDataset):
+    """
+    'txinfo.log' 파일 데이터 셋 클래스
+    - GyeDataset 클래스 내용 구현
+    """
     def __init__(self, file_):
+        """
+        생성자 함수
+        - file_: 파일 경로
+        - header: 헤더 정보
+        - data: 데이터 정보
+        - all: 헤더+데이터 정보
+        """
         self.file_ = file_
         self.header = None
         self.data = None
         self.all = None
 
     def parsing(self):
+        """
+        전체 데이터 파싱 함수
+        - 헤더 내용이 없어 데이터 부분만 분류
+        - 분류 후 각 정보별 파싱 함수 호출
+        """
         with open(self.file_, 'r') as file:
             lines = file.readlines()
         header = None
@@ -447,9 +544,18 @@ class GyeTxinfoDataset(GyeDataset):
         self.parsing_all()
 
     def parsing_header(self, header):
+        """
+        헤더 부분 파싱 함수
+        - header에 내용 저장
+        """
         self.header = header
 
     def parsing_data(self, data):
+        """
+        데이터 부분 파싱 함수
+        - 각 줄의 위치별로 정수형, 실수형 데이터로 변환
+        - 데이터별 이름, 타입을 설정하여 Numpy Structured Array로 data에 저장
+        """
         data_line_list = []
         dtype_list = []
         for line in data:
@@ -472,10 +578,21 @@ class GyeTxinfoDataset(GyeDataset):
         self.data = np.array(list(values), dtype = dtype)
 
     def parsing_all(self):
+        """
+        헤더+데이터 부분 파싱 함수
+        - 헤더, 데이터 정보를 리스트에 추가하여 all에 저장
+        """
         all = [self.header, self.data]
         self.all = all
 
     def plot(self):
+        """
+        데이터 시각화 함수
+        - 조회 데이터 구간 입력, 미입력 시 전체 구간 조회
+        - 데이터 종류별 개별 시각화 여부 입력
+        - 개별 시각화의 경우 종류별로 분할
+        - 통합 시각화의 경우 스케일링 후 종류별로 색을 통해 분류
+        """
         names = self.data.dtype.names
         start_default = self.data[names[0]][0]
         end_default = self.data[names[0]][-1]

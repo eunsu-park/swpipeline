@@ -1,5 +1,7 @@
+# 필요 라이브러리와 모듈 내용 불러오기
 import requests
 
+# 스택 클래스 정의
 class Stack:
     def __init__(self):
         self.stack = []
@@ -25,12 +27,14 @@ class Stack:
     def size(self):
         return len(self.stack)
     
+# undo 입력 시 url의 내용 제거하는 함수 정의
 def remove_from_end(url, pop_str):
     if pop_str == 'skip':
         return url
     else:
         return url[:len(url) - len(pop_str)].rstrip()
 
+# 해당 url의 컨텐츠를 동기화하는 함수 정의
 def fetch_content(url):
     try:
         response = requests.get(url)
@@ -40,9 +44,11 @@ def fetch_content(url):
         print("Error occurred:", e)
         return None
 
+# 데이터 측정 날짜와 이름 출력하는 함수 정의
 def print_data(data):
     print('time: ' + data['time'] + ' / name: ' + data['name'])
 
+# url과 파일 경로를 인자로 받아 파일 경로에 해당 데이터를 다운로드하는 함수 정의
 def download_file(url, file_path):
     json_data = fetch_content(url)
     url = url.replace('search', 'download')
@@ -63,7 +69,8 @@ def download_file(url, file_path):
     print("Download completed from " + url)
     print("Data ID:", data_stack.stack[1]['data_id'])
     url = url.replace('download', 'search')
-    
+ 
+# url을 인자로 받아 해당 콘텐츠의 테이블을 출력하는 함수 정의
 def show_table(url):
     table_json = fetch_content(url)
     print('-----Table List-----')
@@ -80,6 +87,7 @@ def show_table(url):
         data_stack.push({'table': table_data})
         return url
 
+# url을 인자로 받아 해당 콘텐츠의 데이터 아이디를 출력하는 함수 정의
 def show_data_id(url):
     data_id_json = fetch_content(url)
     print('-----Data ID List-----')
@@ -100,6 +108,7 @@ def show_data_id(url):
         data_stack.push({'data_id': data_id_data})
         return url
 
+# url을 인자로 받아 해당 콘텐츠의 측정 시작 날짜를 출력하는 함수 정의
 def show_start_time(url):
     start_time_json = fetch_content(url)
     print('-----Data Info-----')
@@ -121,6 +130,7 @@ def show_start_time(url):
         data_stack.push({'start_time': start_time_input})
         return url
 
+# url을 인자로 받아 해당 콘텐츠의 데이터 목록을 출력하는 함수 정의
 def show_data_list(url):
     data_list_json = fetch_content(url)
     print('-----Data List-----')
@@ -160,6 +170,7 @@ def show_data_list(url):
 data_stack = Stack()
 url_stack = Stack()
 
+# 테이블, 데이터 아이디, 측정 날짜를 순차적으로 검색할 수 있는 함수 정의
 def s_search():
     url = 'http://swds.kasi.re.kr/swpipeline/api/search.php?table'
     while True:
@@ -183,6 +194,7 @@ def s_search():
                 if url == None:
                     break
 
+# 테이블, 데이터 아이디, 측정 날짜를 직접 입력받아 바로 검색하는 함수 정의
 def d_search():
     while True:
         file_info = input("Enter the file info(table name, data id, start time, end time (can be skipped)) / exit: ")
