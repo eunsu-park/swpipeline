@@ -5,18 +5,18 @@ backend softwares for swpy
 
 ## 패키지 구조
 
-swpy_test_package
-├─database
-│ ├─config
-│ │ └─metadata_table_config
-│ └─script
-│ └─db
-├─dataset
-│ ├─api
-│ │ └─__pycache__
-│ └─__pycache__
-└─request
-└─__pycache__
+swpy_test_package  
+├─database  
+│ ├─config  
+│ │ └─metadata_table_config  
+│ └─script  
+│ └─db  
+├─dataset  
+│ ├─api  
+│ │ └─__pycache__  
+│ └─__pycache__  
+└─request  
+└─__pycache__  
 
 
 ## 모듈 내용
