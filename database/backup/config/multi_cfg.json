@@ -1,9 +1,0 @@
-{
-    "cfg_db": "cfg_db.json",
-    "cfg_storage": "cfg_storage.json",
-    "cfg_metadata": [
-        "metadata_table_config/cfg_noaa_goes.json",
-        "metadata_table_config/cfg_ghn.json"
-    ],
-    "global_scan_flag": null
-}

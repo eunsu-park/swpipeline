@@ -1,8 +1,0 @@
-{
-    "cfg_db": "/home/wyslab/Source/database_mingyu/database/config/cfg_db.json",
-    "cfg_storage": "/home/wyslab/Source/database_mingyu/database/config/cfg_storage.json",
-    "cfg_metadata": [
-        "/home/wyslab/Source/database_mingyu/database/config/metadata_config/cfg_noaa_goes.json",
-        "/home/wyslab/Source/database_mingyu/database/config/metadata_config/cfg_ghn.json"
-    ]
-}

@@ -1,1 +1,0 @@
-from dataset.goes.goes import goes_open as open
